@@ -4,4 +4,4 @@ HW_MVC
 
 <img src="https://raw.githubusercontent.com/AlexandrGraschenkov/HW_MVC/master/example.gif" alt="Demo" />
 
-Используйте `NSUserDefaults` для сохранения данных.
+Все визуальные элементы должны сохранять свое состояние при перезапуске. Используйте `NSUserDefaults` для сохранения данных.
