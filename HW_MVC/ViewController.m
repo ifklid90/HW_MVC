@@ -21,15 +21,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSLog(@"there");
     NSString *str = [[NSUserDefaults standardUserDefaults] objectForKey:@"textFieldValue"];
     if (str)
         self.textField.text = str;
-    
+    NSLog(@" wow");
     NSNumber *check = [[NSUserDefaults standardUserDefaults] objectForKey:@"switchValue"];
     check = check ? check : @0;
     [self.mySwitch setOn:check.boolValue animated:NO];
     
-    NSNumber *select = [[NSUserDefaults standardUserDefaults] objectForKey:@"selectValue"];
+    NSNumber *select = [[NSUserDefaults standardUserDefaults] objectForKey:@"segmentValue"];
     select = select ? select : @0;
     self.segment.selectedSegmentIndex = select.integerValue;
     
@@ -55,10 +56,12 @@
     
     [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:color] forKey:@"buttonColorValue"];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    NSLog(@"button pressed");
 }
 - (IBAction)segmentChanged:(id)sender {
     [[NSUserDefaults standardUserDefaults] setObject:[[NSNumber alloc] initWithInteger:self.segment.selectedSegmentIndex] forKey:@"segmentValue"];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    NSLog(@"segment changed");
 }
 - (IBAction)switchChanged:(id)sender {
     [[NSUserDefaults standardUserDefaults] setObject:[[NSNumber alloc] initWithBool:self.mySwitch.isOn] forKey:@"switchValue"];

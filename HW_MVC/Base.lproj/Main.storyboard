@@ -16,14 +16,14 @@
                                 <rect key="frame" x="16" y="56" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="switchChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="xc2-hK-18a"/>
+                                    <action selector="switchChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="yqJ-Hl-pgy"/>
                                 </connections>
                             </switch>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="5NA-kB-7iW">
                                 <rect key="frame" x="14" y="94" width="292" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="sliderChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="x6B-UH-StM"/>
+                                    <action selector="sliderChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Hja-Fn-qxG"/>
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8VN-W8-kut">
@@ -33,7 +33,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchDragInside" id="zEi-cx-gdz"/>
+                                    <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="faj-J5-h3D"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" id="G9g-M7-Jgp">
@@ -47,7 +47,20 @@
                                     <segment title="Fifth"/>
                                 </segments>
                                 <connections>
-                                    <action selector="segmentChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="gox-Tu-T2h"/>
+                                    <action selector="segmentChanged:" destination="vXZ-lx-hvc" eventType="touchDragInside" id="20q-M7-QfE"/>
+                                    <action selector="segmentChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="318-xE-WeQ"/>
+                                    <action selector="segmentChanged:" destination="vXZ-lx-hvc" eventType="touchDragEnter" id="3Rj-9u-Ugf"/>
+                                    <action selector="segmentChanged:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="5Pd-8T-X3B"/>
+                                    <action selector="segmentChanged:" destination="vXZ-lx-hvc" eventType="touchUpOutside" id="L1E-S9-Ihn"/>
+                                    <action selector="segmentChanged:" destination="vXZ-lx-hvc" eventType="touchDragOutside" id="Mhe-LW-RIZ"/>
+                                    <action selector="segmentChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="R8l-1x-GmX"/>
+                                    <action selector="segmentChanged:" destination="vXZ-lx-hvc" eventType="touchDownRepeat" id="Rrb-tK-bBs"/>
+                                    <action selector="segmentChanged:" destination="vXZ-lx-hvc" eventType="touchCancel" id="TFU-uj-tpX"/>
+                                    <action selector="segmentChanged:" destination="vXZ-lx-hvc" eventType="editingDidEndOnExit" id="ZsQ-Ic-CyZ"/>
+                                    <action selector="segmentChanged:" destination="vXZ-lx-hvc" eventType="touchDown" id="czK-WB-1uG"/>
+                                    <action selector="segmentChanged:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="k3M-ne-P21"/>
+                                    <action selector="segmentChanged:" destination="vXZ-lx-hvc" eventType="editingDidBegin" id="mps-mu-rTg"/>
+                                    <action selector="segmentChanged:" destination="vXZ-lx-hvc" eventType="touchDragExit" id="rBM-Hd-Ue2"/>
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Qwb-Pe-sRl">
@@ -56,7 +69,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="textFieldChanged:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="0Sf-KI-cfB"/>
+                                    <action selector="textFieldChanged:" destination="vXZ-lx-hvc" eventType="touchDown" id="4gZ-uC-8Lc"/>
+                                    <action selector="textFieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="EIs-4o-c89"/>
+                                    <action selector="textFieldChanged:" destination="vXZ-lx-hvc" eventType="touchCancel" id="Jc7-sj-EvC"/>
+                                    <action selector="textFieldChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="KGo-Cd-gVD"/>
+                                    <action selector="textFieldChanged:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="L15-qw-uC4"/>
+                                    <action selector="textFieldChanged:" destination="vXZ-lx-hvc" eventType="touchUpOutside" id="Ltz-O9-0uf"/>
+                                    <action selector="textFieldChanged:" destination="vXZ-lx-hvc" eventType="touchDownRepeat" id="Nit-0m-qUp"/>
+                                    <action selector="textFieldChanged:" destination="vXZ-lx-hvc" eventType="editingDidBegin" id="Nwp-tC-rwz"/>
+                                    <action selector="textFieldChanged:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="QRP-AQ-WIj"/>
+                                    <action selector="textFieldChanged:" destination="vXZ-lx-hvc" eventType="touchDragOutside" id="YLm-AL-04U"/>
+                                    <action selector="textFieldChanged:" destination="vXZ-lx-hvc" eventType="touchDragInside" id="aXD-lb-M26"/>
+                                    <action selector="textFieldChanged:" destination="vXZ-lx-hvc" eventType="touchDragEnter" id="cgP-I8-K8L"/>
+                                    <action selector="textFieldChanged:" destination="vXZ-lx-hvc" eventType="touchDragExit" id="fOT-tG-F6L"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -64,9 +89,9 @@
                     </view>
                     <connections>
                         <outlet property="btn" destination="8VN-W8-kut" id="lBg-DL-8s5"/>
+                        <outlet property="mySwitch" destination="0XS-TS-2a3" id="QxU-WJ-MR0"/>
                         <outlet property="segment" destination="G9g-M7-Jgp" id="gD4-mV-Tez"/>
                         <outlet property="slider" destination="5NA-kB-7iW" id="sum-Zb-K8F"/>
-                        <outlet property="switch1" destination="0XS-TS-2a3" id="CgN-3i-QGK"/>
                         <outlet property="textField" destination="Qwb-Pe-sRl" id="1zk-KW-99I"/>
                     </connections>
                 </viewController>
